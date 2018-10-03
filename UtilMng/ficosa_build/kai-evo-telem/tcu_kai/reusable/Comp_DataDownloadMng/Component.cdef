@@ -1,0 +1,7 @@
+sources:
+{
+    DataDownloadMng.c
+    DataDownloadMngFunctions.c
+    DataDownloadMngDbUtil.c
+    DataDownloadMngFDDM.c
+}

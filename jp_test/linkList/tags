@@ -1,0 +1,119 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BIN_NAME	Makefile	/^BIN_NAME := testsll$/;"	m
+BIN_PATH	Makefile	/^debug: export BIN_PATH := bin\/debug$/;"	m
+BIN_PATH	Makefile	/^install: export BIN_PATH := bin\/release$/;"	m
+BIN_PATH	Makefile	/^release: export BIN_PATH := bin\/release$/;"	m
+BUILD_PATH	Makefile	/^debug: export BUILD_PATH := build\/debug$/;"	m
+BUILD_PATH	Makefile	/^release: export BUILD_PATH := build\/release$/;"	m
+CC	Makefile	/^CC ?= gcc$/;"	m
+CFLAGS	Makefile	/^debug: export CFLAGS := $(CFLAGS) $(COMPILE_FLAGS) $(DCOMPILE_FLAGS)$/;"	m
+CFLAGS	Makefile	/^release: export CFLAGS := $(CFLAGS) $(COMPILE_FLAGS) $(RCOMPILE_FLAGS)$/;"	m
+CMD_PREFIX	Makefile	/^	CMD_PREFIX :=$/;"	m
+CMD_PREFIX	Makefile	/^export CMD_PREFIX := @$/;"	m
+COMPILE_FLAGS	Makefile	/^COMPILE_FLAGS = -std=c99 -Wall -Wextra -g$/;"	m
+CUR_TIME	Makefile	/^	CUR_TIME = awk 'BEGIN{srand(); print srand()}'$/;"	m
+DCOMPILE_FLAGS	Makefile	/^DCOMPILE_FLAGS = -D DEBUG$/;"	m
+DEPS	Makefile	/^DEPS = $(OBJECTS:.o=.d)$/;"	m
+DESTDIR	Makefile	/^DESTDIR = \/$/;"	m
+DLINK_FLAGS	Makefile	/^DLINK_FLAGS =$/;"	m
+DT_CHAR	linklist.h	/^    DT_CHAR     = 0,$/;"	e	enum:__anon2
+DT_DOUBLE	linklist.h	/^    DT_DOUBLE   = 5 << 8,$/;"	e	enum:__anon2
+DT_FLOAT	linklist.h	/^    DT_FLOAT    = 4 << 8,$/;"	e	enum:__anon2
+DT_INT	linklist.h	/^    DT_INT      = 2 << 8,$/;"	e	enum:__anon2
+DT_LONG	linklist.h	/^    DT_LONG     = 3 << 8,$/;"	e	enum:__anon2
+DT_PRIMARY	linklist.h	/^    DT_PRIMARY  = 0xff00,$/;"	e	enum:__anon2
+DT_SHORT	linklist.h	/^    DT_SHORT    = 1 << 8,$/;"	e	enum:__anon2
+DT_UNSIGNED	linklist.h	/^    DT_UNSIGNED = 1 << 15,$/;"	e	enum:__anon2
+DT_USRDEF	linklist.h	/^    DT_USRDEF   = 0xff,$/;"	e	enum:__anon2
+END_TIME	Makefile	/^	END_TIME = read st < $(TIME_FILE) ; \\$/;"	m
+FLAGS	Makefile	/^	override CFLAGS := $(CFLAGS) \\$/;"	m
+INCLUDES	Makefile	/^INCLUDES = -I $(SRC_PATH)$/;"	m
+INSTALL	Makefile	/^INSTALL = install$/;"	m
+INSTALL_DATA	Makefile	/^INSTALL_DATA = $(INSTALL) -m 644$/;"	m
+INSTALL_PREFIX	Makefile	/^INSTALL_PREFIX = usr\/local$/;"	m
+INSTALL_PROGRAM	Makefile	/^INSTALL_PROGRAM = $(INSTALL)$/;"	m
+ITEM_BEGIN	linklist.h	/^    ITEM_BEGIN  = 0,$/;"	e	enum:__anon1
+ITEM_END	linklist.h	/^    ITEM_END    = 2,$/;"	e	enum:__anon1
+ITEM_FIRST	linklist.h	/^    ITEM_FIRST  = 3,$/;"	e	enum:__anon1
+ITEM_LAST	linklist.h	/^    ITEM_LAST   = 4$/;"	e	enum:__anon1
+ITEM_NEXT	linklist.h	/^    ITEM_NEXT   = 1,$/;"	e	enum:__anon1
+LDFLAGS	Makefile	/^debug: export LDFLAGS := $(LDFLAGS) $(LINK_FLAGS) $(DLINK_FLAGS)$/;"	m
+LDFLAGS	Makefile	/^release: export LDFLAGS := $(LDFLAGS) $(LINK_FLAGS) $(RLINK_FLAGS)$/;"	m
+LIBS	Makefile	/^LIBS = $/;"	m
+LINK_FLAGS	Makefile	/^LINK_FLAGS = -lpthread$/;"	m
+OBJECTS	Makefile	/^OBJECTS = $(SOURCES:$(SRC_PATH)\/%.$(SRC_EXT)=$(BUILD_PATH)\/%.o)$/;"	m
+RCOMPILE_FLAGS	Makefile	/^RCOMPILE_FLAGS = -D NDEBUG$/;"	m
+RLINK_FLAGS	Makefile	/^RLINK_FLAGS =$/;"	m
+SHELL	Makefile	/^SHELL = \/bin\/bash$/;"	m
+SLLIST_INITIALIZER	linklist.h	5;"	d
+SLQUEUE_INITIALIZER	linklist.h	10;"	d
+SLSTACK_INITIALIZER	linklist.h	9;"	d
+SOURCES	Makefile	/^	SOURCES := $(call rwildcard, $(SRC_PATH), *.$(SRC_EXT))$/;"	m
+SOURCES	Makefile	/^	SOURCES = $(shell find $(SRC_PATH) -name '*.$(SRC_EXT)' -printf '%T@\\t%p\\n' \\$/;"	m
+SOURCES	Makefile	/^	SOURCES = $(shell find $(SRC_PATH) -name '*.$(SRC_EXT)' | sort -k 1nr | cut -f2-)$/;"	m
+SRC_EXT	Makefile	/^SRC_EXT = c$/;"	m
+SRC_PATH	Makefile	/^SRC_PATH = .$/;"	m
+START_TIME	Makefile	/^	START_TIME = $(CUR_TIME) > $(TIME_FILE)$/;"	m
+START_TIME	Makefile	/^	START_TIME = date '+%s' > $(TIME_FILE)$/;"	m
+TIME_FILE	Makefile	/^	TIME_FILE = $(dir $@).$(notdir $@)_time$/;"	m
+UNAME_S	Makefile	/^UNAME_S:=$(shell uname -s)$/;"	m
+UNUSED	testsll.c	23;"	d	file:
+USE_VERSION	Makefile	/^	USE_VERSION := true$/;"	m
+USE_VERSION	Makefile	/^USE_VERSION := false$/;"	m
+V	Makefile	/^export V := false$/;"	m
+VERSION	Makefile	/^	VERSION := $(shell git describe --tags --long --dirty --always | \\$/;"	m
+VERSION_HASH	Makefile	/^	VERSION_HASH := $(word 5, $(VERSION))$/;"	m
+VERSION_MAJOR	Makefile	/^	VERSION_MAJOR := $(word 1, $(VERSION))$/;"	m
+VERSION_MINOR	Makefile	/^	VERSION_MINOR := $(word 2, $(VERSION))$/;"	m
+VERSION_PATCH	Makefile	/^	VERSION_PATCH := $(word 3, $(VERSION))$/;"	m
+VERSION_REVISION	Makefile	/^	VERSION_REVISION := $(word 4, $(VERSION))$/;"	m
+VERSION_STRING	Makefile	/^	VERSION_STRING := \\$/;"	m
+__LINKLIST_H__	linklist.h	3;"	d
+compare_t	linklist.h	/^typedef int (*compare_t)(sliteminfo_t *, sliteminfo_t *); \/* return 0 => equal, -1 => less, 1 => greater *\/$/;"	t
+first_entry	linklist.h	/^    struct sll_node *first_entry;$/;"	m	struct:sll_list	typeref:struct:sll_list::sll_node
+item	linklist.h	/^    void *item;$/;"	m	struct:sll_item_info
+item_count	linklist.h	/^    int item_count;$/;"	m	struct:sll_list
+item_length	linklist.h	/^    unsigned int item_length;$/;"	m	struct:sll_item_info
+item_length	linklist.h	/^    unsigned int item_length;$/;"	m	struct:sll_node
+item_type	linklist.h	/^    unsigned int item_type;$/;"	m	struct:sll_item_info
+item_type	linklist.h	/^    unsigned int item_type;$/;"	m	struct:sll_node
+last_entry	linklist.h	/^    struct sll_node *last_entry;$/;"	m	struct:sll_list	typeref:struct:sll_list::sll_node
+list	linklist.h	/^    struct sll_list list;$/;"	m	struct:sll_queue	typeref:struct:sll_queue::sll_list
+list	linklist.h	/^    struct sll_list list;$/;"	m	struct:sll_stack	typeref:struct:sll_stack::sll_list
+list	testsll.c	/^static slist_t list = SLLIST_INITIALIZER;$/;"	v	file:
+lock	linklist.h	/^    pthread_mutex_t lock;$/;"	m	struct:sll_list
+main	testsll.c	/^int main(int argc, char **argv)$/;"	f
+mycomp	testsll.c	/^static int mycomp(sliteminfo_t *x, sliteminfo_t *y)$/;"	f	file:
+next	linklist.h	/^    struct sll_node *next;$/;"	m	struct:sll_node	typeref:struct:sll_node::sll_node
+queue_limit	linklist.h	/^    int queue_limit;$/;"	m	struct:sll_queue
+rwildcard	Makefile	/^rwildcard = $(foreach d, $(wildcard $1*), $(call rwildcard,$d\/,$2) \\$/;"	m
+slist_t	linklist.h	/^typedef struct sll_list  slist_t;$/;"	t	typeref:struct:sll_list
+sliteminfo_t	linklist.h	/^typedef struct sll_item_info sliteminfo_t;$/;"	t	typeref:struct:sll_item_info
+sll_addAtHead	linklist.c	/^int sll_addAtHead(slist_t *list, void *data, unsigned int data_length, int data_type)$/;"	f
+sll_addAtTail	linklist.c	/^int sll_addAtTail(slist_t *list, void *data, unsigned int data_length, int data_type)$/;"	f
+sll_addToList	linklist.c	/^int sll_addToList(slist_t *list, void *data, unsigned int data_length, int data_type)$/;"	f
+sll_dequeue	linklist.c	/^int sll_dequeue(slqueue_t *queue, void *outbuf, int *data_type)$/;"	f
+sll_enqueue	linklist.c	/^int sll_enqueue(slqueue_t *queue, void *data, unsigned int data_length, int data_type)$/;"	f
+sll_getListItem	linklist.c	/^int sll_getListItem(sllist_traverse_t cmd, slist_t *list,void *outbuf, int *data_type)$/;"	f
+sll_getListItemCount	linklist.c	/^int sll_getListItemCount(slist_t *list)$/;"	f
+sll_item_info	linklist.h	/^struct sll_item_info {$/;"	s
+sll_list	linklist.h	/^struct sll_list {$/;"	s
+sll_node	linklist.h	/^struct sll_node {$/;"	s
+sll_pop	linklist.c	/^int sll_pop(slstack_t *stack, void *outbuf, int *data_type)$/;"	f
+sll_push	linklist.c	/^int sll_push(slstack_t *stack, void *data, unsigned int data_length, int data_type)$/;"	f
+sll_queue	linklist.h	/^struct sll_queue {$/;"	s
+sll_removeFromHead	linklist.c	/^int sll_removeFromHead(slist_t *list, void *outbuf, int *data_type)$/;"	f
+sll_removeFromTail	linklist.c	/^int sll_removeFromTail(slist_t *list, void *outbuf, int *data_type)$/;"	f
+sll_sortList	linklist.c	/^int sll_sortList(slist_t *list, compare_t compare, int reverse)$/;"	f
+sll_stack	linklist.h	/^struct sll_stack {$/;"	s
+sll_swap	linklist.c	/^static void sll_swap(slist_t *list, struct sll_node *prev)$/;"	f	file:
+sllist_itemtype_t	linklist.h	/^} sllist_itemtype_t;$/;"	t	typeref:enum:__anon2
+sllist_traverse_t	linklist.h	/^} sllist_traverse_t;$/;"	t	typeref:enum:__anon1
+slqueue_t	linklist.h	/^typedef struct sll_queue  slqueue_t;$/;"	t	typeref:struct:sll_queue
+slstack_t	linklist.h	/^typedef struct sll_stack  slstack_t;$/;"	t	typeref:struct:sll_stack
+stack_limit	linklist.h	/^    int stack_limit;$/;"	m	struct:sll_stack

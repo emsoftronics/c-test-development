@@ -1,0 +1,7 @@
+
+1.) Server application
+	i) client class
+	members
+		a)info
+		b)
+				

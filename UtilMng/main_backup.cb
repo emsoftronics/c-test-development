@@ -1,0 +1,96 @@
+/*
+ * =====================================================================================
+ *
+ *       Filename:  main.c
+ *
+ *    Description:
+ *
+ *        Version:  1.0
+ *        Created:  Sunday 15 January 2017 12:03:19  IST
+ *       Revision:  1.1
+ *       Compiler:  gcc
+ *
+ *         Author:  Jagdish Prajapati (JP), prajapatijagdish@gmail.com
+ *        Company:  Emsoftronic
+ *
+ * =====================================================================================
+ */
+
+
+
+#include <stdio.h>
+#include <string.h>
+#include "UtilMngDb.h"
+#define DBASE "mytest.db"
+
+t_util_db udb = UM_DB_INIT;
+
+
+static int db_callback(void * ex_buf, int argc, char **argv, char **colname)
+{
+    static BOOL flag = TRUE;
+    int i;
+
+    if (flag)
+    {
+        printf("---------------------------------------------------------------------------------------\n");
+        for(i=0; i<argc; i++){
+            printf(" %12s |", colname[i]);
+        }
+        printf("\n---------------------------------------------------------------------------------------\n");
+        flag = FALSE;
+    }
+    for(i=0; i<argc; i++){
+        printf(" %12s |",  argv[i] ? argv[i] : "NULL");
+    }
+    printf("\n");
+    return 0;
+}
+
+char buf[200] = {0};
+void main(int argc, char **argv)
+{
+
+    UtilMngInitDb(&udb,DBASE,db_callback);
+    if (argc == 1)
+    {
+        UtilMngExecDbQuery(&udb, "select * from mydata;", NULL);
+    }
+    else if (argc == 2 )
+    {
+        if (*argv[1] == 'd')
+        {
+            //UtilMngDelDataFromDb(&udb, "mydata", NULL);
+            UtilMngDropTableFromDb(&udb, "mydata");
+            //printf("Total Rows: %d\n", UtilMngCountDbRows(&udb, "mydata"));
+        }
+        else
+        {
+            UtilMngPutDataToDb(&udb, "mydata", NULL, argv[1], strlen(argv[1])+1);
+        }
+    }
+    else if (argc == 3 )
+    {
+        if (*argv[1] == 'd')
+        {
+            UtilMngDelDataFromDb(&udb, "mydata", argv[2]);
+        }
+        else
+        {
+//            UtilMngPushDataToDb(&udb, "mydata", argv[1], strlen(argv[1])+1, atoi(argv[2]));
+        UtilMngPutDataToDb(&udb, "mydata", argv[1], argv[2], strlen(argv[2])+1);
+        }
+    }
+    else
+    {
+        memset(buf,0,sizeof(buf));
+        //UtilMngGetDataFromDb(&udb, "mydata",argv[1], buf , sizeof(buf));
+        int i = 0;
+        i = UtilMngPopFrstDataFromDb(&udb, "mydata", buf , sizeof(buf));
+        printf("length(%d):%s\n", i-1, buf);
+    }
+}
+
+
+
+
