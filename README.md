@@ -1,2 +1,2 @@
 # c-test-development
-Test application developed
+Developed some test application to check concepts of c.
